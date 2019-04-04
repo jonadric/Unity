@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
-        setCountText();
+        SetCountText();
     }
 
     void FixedUpdate()
@@ -35,16 +35,16 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
-            setCountText();
+            SetCountText();
         }
     }
 
-    void setCountText()
+    void SetCountText()
     {
         countText.text = "Contador: " + count.ToString();
         if (count >= 17)
         {
-            winText.text = "Has Ganado";
+            winText.text = "Has Ganado !!!";
         }
     }
 }
